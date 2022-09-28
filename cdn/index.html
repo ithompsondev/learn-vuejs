@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VueJS Tutorial</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Vue app mounted here using the selector id="app-->
+    <div id="app">
+        <!-- Declarative rendering. Assuming app mounting from app.js-->
+        <h1>Hello, {{firstname}} {{lastname}}</h1>
+
+        <!-- To use declarative rendering for html attributes such as img we need to use the v-bind directive -->
+        <img v-bind:class="gender" v-bind:src="portrait" alt="mary-sue.jpg">
+
+        <!--Add events to a button using v-on:event-->
+        <!--This will then call a method defined in our app's (mounted) data method-->
+        <button v-on:click="getRandomUser()">Get Random User</button>
+    </div>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
